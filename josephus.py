@@ -1,4 +1,5 @@
 from collections import deque
+from random import randint
 
 names = ["Charlie", "Moe", "Curly", "Shirley", "Whirly", "Nurt", "Stranger", "Seutonius", "Caesar", "Billfinger", "Job", "Isaac", "Napoleon", "Camus", "Unnammed Man", "Gurt", "Frank 16", "Albert", "Bob", "Ann", "Lisa", "Billy", "23", "Aaron", "Jared", "Susan", "Jeb", "Donald", "Bernie", "30", "Josephus", "Manfield", "Yoda", "Luke", "Leia", "Adam", "Eve", "Toby", "Dalton", "Percy"]
 qq = deque()
@@ -20,4 +21,4 @@ def josephus(names, m):
     print(" ")
     print(qq.popleft() + " survived.")
 
-josephus(names, 3)
+josephus(names, randint(1,13))
