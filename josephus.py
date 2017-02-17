@@ -8,6 +8,7 @@ def josephus(names, m):
     for name in names:
         qq.append(name)
     count = 0
+    roun = 0
     while len(qq) > 1:
         count = count + 1
         name = qq.popleft()
@@ -15,10 +16,14 @@ def josephus(names, m):
             qq.append(name)
             print('\033[92m', count, name, "was skipped.", '\033[0m')
         else:
-            print('\033[91m', count, name, "was murdered.", '\033[0m')
+            roun = roun + 1
+            print('\033[91m', count, name, "was murdered", '\033[0m', "in round ", roun, ".")
             print(" ")
             count = 0
+
     print(" ")
-    print(qq.popleft() + " survived.")
+    print(qq.popleft() + " survived", roun + 1, "rounds,")
+    print(" ")
+    print(" ")
 
 josephus(names, randint(1,13))
