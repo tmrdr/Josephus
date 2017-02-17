@@ -26,4 +26,4 @@ def josephus(names, m):
     print(" ")
     print(" ")
 
-josephus(names, randint(1,13))
+josephus(names, randint(1,40))
