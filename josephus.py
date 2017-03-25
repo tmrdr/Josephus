@@ -14,15 +14,15 @@ def josephus(names, m):
         name = qq.popleft()
         if count != m:
             qq.append(name)
-            print('\033[92m', count, name, "was skipped.", '\033[0m')
+            print(count,'\033[92m', '\033[93m', name, '\033[0m', "was skipped.", '\033[0m')
         else:
             roun = roun + 1
-            print('\033[91m', count, name, "was murdered", '\033[0m', "in round ", roun, ".")
+            print(count, '\033[91m', name, "was murdered", '\033[0m', "in round ", roun, ".")
             print(" ")
             count = 0
 
     print(" ")
-    print('\033[93m', qq.popleft(), '\033[0m', "survived", roun + 1, "rounds,")
+    print('\033[94m', qq.popleft(), '\033[0m', "survived", roun + 1, "rounds,")
     print(" ")
     print(" ")
 
