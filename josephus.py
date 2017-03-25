@@ -22,7 +22,7 @@ def josephus(names, m):
             count = 0
 
     print(" ")
-    print(qq.popleft() + " survived", roun + 1, "rounds,")
+    print('\033[93m', qq.popleft(), '\033[0m', "survived", roun + 1, "rounds,")
     print(" ")
     print(" ")
 
